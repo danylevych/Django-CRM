@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="d-flex justify-content-center">
+	<div class="col-md-5">
+		<h2 class="mt-5">Update Record</h2>
+		<form method="POST" class="mt-3">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit" class="btn btn-primary">Update</button>
+			<br>
+		</form>
+	</div>
+</div>
+{% endblock %}
